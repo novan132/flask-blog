@@ -1,6 +1,23 @@
+
 {% extends "template.html" %}
+
 {% block content %}
     <h2>Welcome to My Blog</h2>
     <h3>Please login to acccess the blog</h3>
-    <p>Temp login: <a href="/main">Log in</a></p>
+
+    <form action="" method='post'>
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" value="{{ request.form.username }}">
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password"value="{{ request.form.password }}">
+        </div>
+
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
 {% endblock %}
